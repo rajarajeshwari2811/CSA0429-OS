@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+    int n,i;
+    printf("Blocks: "); scanf("%d",&n);
+    printf("Linked Allocation:\n");
+    for(i=0;i<n;i++){
+        if(i<n-1) printf("%d -> ",i+5);
+        else printf("%d -> NULL\n",i+5);
+    }
+}
