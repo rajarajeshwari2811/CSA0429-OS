@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+    int n,i;
+    printf("Records: "); scanf("%d",&n);
+    printf("Sequential Blocks:\n");
+    for(i=0;i<n;i++) printf("Block %d -> Record %d\n",i,i+1);
+}
