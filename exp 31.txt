@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+    int n,f,i,j=0,hit=0;
+    printf("Enter pages: ");
+    scanf("%d",&n);
+    int p[n];
+    for(i=0;i<n;i++) scanf("%d",&p[i]);
+
+    printf("Enter frames: ");
+    scanf("%d",&f);
+    int fr[f];
+    for(i=0;i<f;i++) fr[i]=-1;
+
+    for(i=0;i<n;i++){
+        int found=0;
+        for(int k=0;k<f;k++)
+            if(fr[k]==p[i]) found=1,hit++;
+        if(!found){
+            fr[j]=p[i];
+            j=(j+1)%f;
+        }
+    }
+    printf("Page Faults = %d\n",n-hit);
+}
