@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int n,i,head,total=0;
+    printf("Requests: "); scanf("%d",&n);
+    int q[n]; for(i=0;i<n;i++) scanf("%d",&q[i]);
+    printf("Head: "); scanf("%d",&head);
+
+    for(i=0;i<n;i++){
+        total+=abs(q[i]-head);
+        head=q[i];
+    }
+    printf("Total Movement = %d\n",total);
+}
