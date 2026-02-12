@@ -1,0 +1,7 @@
+#include<stdio.h>
+int main(){
+    int n,i;
+    printf("Blocks: "); scanf("%d",&n);
+    printf("Index Block:\n");
+    for(i=0;i<n;i++) printf("Index[%d] -> Block %d\n",i,i+10);
+}
